@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDIO SPARK — Дизайн интерьеров</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SG</div>
+            <ul class="nav-links">
+                <li><a href="#about">О Нас</a></li>
+                <li><a href="#portfolio">Проекты</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Студия дизайна<br>SPARK GROUP</h1>
+            <p>Мы создаём атмосферу для кафе и ресторанов.<br>И боримся лишь за 2 вещи в дизайне: простота и ясность</p>
+            <a href="#portfolio" class="btn">Смотреть проекты</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>О Нас</h2>
+        <div class="about">
+            <div class="about-text">
+                <p>Здравствуйте, мы занимаемся внутренней рекламой и анализом, а также улучшением внутреннего оформления кафе и ресторанов с целью увеличения продаж внутри заведения.</p>
+                <p>Наш подход — минимум лишнего, максимум характера. Чёрный цвет как база и тёплый янтарный акцент, который делает пространство живым.</p>
+                <p>Каждый проект — это история. Мы не просто делаем дизайн, мы создаем настроение, в котором хочется оставаться.</p>
+            </div>
+            <div>
+                <img src="ads.jpg" alt="Интерьер" class="about-img">
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2>Последние проекты</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="project1.jpg" alt="Проект 1">
+                <div class="card-content">
+                    <h3>БЛА БЛА</h3>
+                    <p>Шымкент, 2026</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="project2.jpg" alt="Проект 2">
+                <div class="card-content">
+                    <h3>БЛЕ БЛЕ</h3>
+                    <p>Шымкент, 2025</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="project3.jpg" alt="Проект 3">
+                <div class="card-content">
+                    <h3>БЛЮ БЛЮ</h3>
+                    <p>Шымкент, 2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Что мы делаем</h2>
+        <div class="services">
+            <div class="service-item">
+                <h3>Брендинг</h3>
+                <p>Разработка общей идеи и настроения заведения</p>
+            </div>
+            <div class="service-item">
+                <h3>Реклама</h3>
+                <p>Полный комплект чертежей и визуализаций</p>
+            </div>
+            <div class="service-item">
+                <h3>Навигация</h3>
+                <p>Контроль реализации до последней лампочки</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="logo">SPARK GROUP</div>
+            <p>Готовы создать атмосферу вместе?</p>
+            <p><a href="mailto:larenka1337@gmail.com" class="email">larenka1337@gmail.com</a></p>
+            <p><a href="tel:+77071911741" class="tel">+7-707-191-17-41</a></p>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+    --black: #0f0f0f;
+    --amber: #d4a017;
+    --amber-dark: #b8860b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1208 50%, #0f0f0f 100%);
+    color: #e5e5e5;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(212, 160, 23, 0.2);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--amber);
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--amber);
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(15,15,15,0.85) 0%, rgba(26,18,8,0.75) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    color: #ccc;
+    margin-bottom: 2.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 42px;
+    background: transparent;
+    color: var(--amber);
+    border: 2px solid var(--amber);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.4s;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background: var(--amber);
+    color: #0f0f0f;
+}
+
+/* Sections */
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 2rem;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--amber);
+}
+
+/* About */
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.about-img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* Portfolio */
+.portfolio {
+    background: rgba(15, 15, 15, 0.6);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+}
+
+.card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    color: var(--amber);
+    margin-bottom: 0.5rem;
+}
+
+/* Services */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.service-item {
+    background: #1a1a1a;
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(212, 160, 23, 0.15);
+}
+
+.service-item h3 {
+    color: var(--amber);
+    margin: 1.2rem 0;
+}
+
+/* Footer */
+footer {
+    background: #0a0a0a;
+    padding: 4rem 2rem 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(212, 160, 23, 0.2);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content .logo {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.email {
+    color: var(--amber);
+    text-decoration: none;
+}
+
+.copyright {
+    color: #666;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3.2rem;
+    }
+    .about {
+        grid-template-columns: 1fr;
+    }
+}
